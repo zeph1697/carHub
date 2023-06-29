@@ -11,6 +11,7 @@ import {
   Hero,
   CustomButton,
 } from "@components";
+import ScrollTop from "@components/ScrollTop";
 
 export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars({
@@ -63,13 +64,7 @@ export default async function Home({ searchParams }: HomeProps) {
         )}
       </div>
 
-      <Link href={"#discover"}>
-        <CustomButton
-          title=""
-          containerStyles="absolute bottom-5 right-10 bg-gray-300 hover:bg-primary-blue rounded-xl -rotate-90"
-          rightIcon="/right-arrow.svg"
-        />
-      </Link>
+      <ScrollTop />
     </main>
   );
 }
